@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-labelledby="t"><title id="t">A cat sitting beside a lickable treat and a fish-shaped snack</title>
+<defs><pattern id="w" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(25)"><rect width="14" height="14" fill="#9DB8A4"/><rect width="1" height="14" fill="#AFC6B4"/></pattern></defs>
+<rect width="320" height="240" fill="url(#w)"/>
+<ellipse cx="160" cy="222" rx="110" ry="10" fill="#7E9C86" opacity=".6"/>
+<path d="M196 206 Q258 204 250 158 Q246 132 266 120" stroke="#1B2350" stroke-width="15" fill="none" stroke-linecap="round"/>
+<ellipse cx="150" cy="168" rx="56" ry="54" fill="#1B2350"/>
+<ellipse cx="150" cy="166" rx="22" ry="32" fill="#F2F4EE"/>
+<path d="M114 80 L118 40 L146 66Z" fill="#1B2350"/><path d="M186 80 L182 40 L154 66Z" fill="#1B2350"/>
+<path d="M121 72 L123 52 L138 66Z" fill="#E8A0A0"/><path d="M179 72 L177 52 L162 66Z" fill="#E8A0A0"/>
+<circle cx="150" cy="96" r="40" fill="#1B2350"/>
+<ellipse cx="135" cy="94" rx="6" ry="8" fill="#D9971E"/><ellipse cx="165" cy="94" rx="6" ry="8" fill="#D9971E"/>
+<ellipse cx="135" cy="95" rx="2" ry="6" fill="#1B2350"/><ellipse cx="165" cy="95" rx="2" ry="6" fill="#1B2350"/>
+<path d="M144 108 L156 108 L150 115Z" fill="#E8A0A0"/>
+<path d="M112 110 L88 106 M112 116 L88 118 M188 110 L212 106 M188 116 L212 118" stroke="#F2F4EE" stroke-width="2" stroke-linecap="round"/>
+<g transform="rotate(14 262 180)"><rect x="250" y="138" width="24" height="78" rx="7" fill="#F2F4EE" stroke="#1B2350" stroke-width="3"/><rect x="250" y="166" width="24" height="16" fill="#D9971E"/><path d="M250 146 L274 146" stroke="#1B2350" stroke-width="3"/></g>
+<path d="M44 200 Q68 182 92 200 Q68 218 44 200Z" fill="#F2F4EE" stroke="#1B2350" stroke-width="3"/><path d="M92 200 L106 188 L106 212Z" fill="#F2F4EE" stroke="#1B2350" stroke-width="3" stroke-linejoin="round"/><circle cx="56" cy="198" r="2.5" fill="#1B2350"/>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" role="img" aria-labelledby="t"><title id="t">A Thai-made boxing glove with a hand wrap</title>
+<defs><pattern id="w" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(25)"><rect width="14" height="14" fill="#A63D2F"/><rect width="1" height="14" fill="#B5503F"/></pattern></defs>
+<rect width="320" height="240" fill="url(#w)"/>
+<path d="M-10 214 Q70 176 150 214 T330 200" stroke="#F2F4EE" stroke-width="16" fill="none" opacity=".35" stroke-linecap="round"/>
+<path d="M104 60 Q104 30 146 30 L198 30 Q240 30 240 78 L240 136 Q240 164 212 168 L132 168 Q104 168 104 138Z" fill="#F2F4EE" stroke="#3A120C" stroke-width="3.5" stroke-linejoin="round"/>
+<path d="M106 102 Q76 100 78 128 Q80 158 116 156" fill="#F2F4EE" stroke="#3A120C" stroke-width="3.5" stroke-linejoin="round"/>
+<path d="M138 46 Q170 40 206 46" stroke="#C9C4BA" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M132 140 Q170 132 216 140" stroke="#C9C4BA" stroke-width="3" fill="none" stroke-linecap="round"/>
+<rect x="128" y="164" width="92" height="52" rx="8" fill="#1B2350" stroke="#3A120C" stroke-width="3"/>
+<rect x="128" y="182" width="92" height="12" fill="#D9971E"/>
+<path d="M150 70 Q172 62 194 70" stroke="#A63D2F" stroke-width="4" fill="none" stroke-linecap="round"/>
+<path d="M104 118 Q92 120 90 132" stroke="#C9C4BA" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M262 44 l4 12 12 4 -12 4 -4 12 -4 -12 -12 -4 12 -4z" fill="#D9971E"/><path d="M60 52 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3z" fill="#F2F4EE" opacity=".8"/>
+</svg>

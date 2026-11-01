@@ -5,96 +5,100 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Jaidee & Co.</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Jaidee & Co. is a new house of brands taking Thai craftsmanship to customers worldwide.">
+<meta name="description" content="Jaidee & Co. is a new house of brands taking Thai craftsmanship to customers worldwide. We partner with Thai manufacturers in herbal wellness, pet treats, Muay Thai gear and silver jewelry.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://jaideeco.com/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jaideeco.com/">
+<meta property="og:title" content="Jaidee & Co. | Made in Thailand, loved around the world">
+<meta property="og:description" content="A new house of brands taking Thai craftsmanship to customers worldwide. Thai manufacturers: let's build something together.">
+<meta property="og:image" content="https://jaideeco.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chonburi&family=Sarabun:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap">
 <style>
-/* Layout: indigo-dyed cloth meets turmeric — wide editorial bands, a left-aligned type-led hero, category "swatches" as the visual centre. */
+/* Layout: indigo-dyed cloth meets turmeric. Wide editorial bands, a type-led hero, the four categories as illustrated "swatches". */
 :root{
-  --bg:#F2F4EE;          /* celadon-tinted paper */
-  --surface:#FFFFFF;
-  --ink:#1B2350;         /* Sakon Nakhon indigo */
-  --fg:#1F2433;
-  --muted:#5C6377;
-  --line:#D5DACE;
-  --turmeric:#D9971E;
-  --celadon:#9DB8A4;
-  --lac:#A63D2F;         /* lacquer red, used once */
-  --silver:#B7BCC6;
-  --band:#1B2350;        /* dark band background */
-  --band-fg:#EEF0E8;
+  --bg:#F2F4EE; --surface:#FFFFFF; --ink:#1B2350; --fg:#1F2433; --muted:#5C6377; --line:#D5DACE;
+  --turmeric:#D9971E; --celadon:#9DB8A4; --lac:#A63D2F; --silver:#B7BCC6;
+  --band:#1B2350; --band-fg:#EEF0E8; --ok:#2E7D4F; --err:#B3261E; --field:#FFFFFF;
   --font-display:"Chonburi", Georgia, "Times New Roman", serif;
   --font-body:"Sarabun", "Segoe UI", system-ui, sans-serif;
-  --step--1:clamp(.82rem,.8rem + .1vw,.88rem);
-  --step-0:clamp(1rem,.96rem + .2vw,1.1rem);
-  --step-1:clamp(1.25rem,1.15rem + .5vw,1.5rem);
-  --step-2:clamp(1.6rem,1.4rem + 1vw,2.2rem);
-  --step-3:clamp(2.2rem,1.7rem + 2.4vw,3.8rem);
-  --radius:6px;
+  --step--1:clamp(.82rem,.8rem + .1vw,.88rem); --step-0:clamp(1rem,.96rem + .2vw,1.1rem);
+  --step-1:clamp(1.25rem,1.15rem + .5vw,1.5rem); --step-2:clamp(1.6rem,1.4rem + 1vw,2.2rem);
+  --step-3:clamp(2.2rem,1.7rem + 2.4vw,3.8rem); --radius:6px;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --bg:#11152A; --surface:#181D36; --ink:#E7B44A; --fg:#E9ECE3; --muted:#A3A9BB; --line:#2C3354;
+    --bg:#11152A; --surface:#181D36; --ink:#EFE3C2; --fg:#E9ECE3; --muted:#A3A9BB; --line:#2C3354;
     --turmeric:#E7B44A; --celadon:#8FAE98; --lac:#D06A58; --silver:#8E94A3; --band:#0B0E1E; --band-fg:#E9ECE3;
-    color-scheme:dark;
+    --ok:#6FCF97; --err:#F28B82; --field:#11152A; color-scheme:dark;
   }
 }
 :root[data-theme="dark"]{
-  --bg:#11152A; --surface:#181D36; --ink:#E7B44A; --fg:#E9ECE3; --muted:#A3A9BB; --line:#2C3354;
+  --bg:#11152A; --surface:#181D36; --ink:#EFE3C2; --fg:#E9ECE3; --muted:#A3A9BB; --line:#2C3354;
   --turmeric:#E7B44A; --celadon:#8FAE98; --lac:#D06A58; --silver:#8E94A3; --band:#0B0E1E; --band-fg:#E9ECE3;
-  color-scheme:dark;
+  --ok:#6FCF97; --err:#F28B82; --field:#11152A; color-scheme:dark;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
 body{background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:var(--step-0);line-height:1.6;margin:0}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+img{max-width:100%;display:block}
 a{color:inherit}
 :focus-visible{outline:2px solid var(--turmeric);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:-9999px;top:8px;background:var(--ink);color:var(--bg);padding:8px 14px;border-radius:var(--radius);z-index:20}
+.skip:focus{left:16px}
 .wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 h1,h2,h3{font-family:var(--font-display);font-weight:400;line-height:1.15;text-wrap:balance;margin:0;color:var(--ink)}
 p{margin:0}
 .eyebrow{font-size:var(--step--1);text-transform:uppercase;letter-spacing:.14em;font-weight:600;color:var(--muted)}
 .thai{font-family:var(--font-body);font-weight:600;letter-spacing:0}
 
-/* Header */
-header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+/* Header + nav */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
 header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
 .mark{display:flex;align-items:baseline;gap:10px;text-decoration:none}
 .mark b{font-family:var(--font-display);font-weight:400;font-size:1.3rem;color:var(--ink)}
 .mark span{font-size:.95rem;color:var(--turmeric)}
-nav{display:flex;gap:22px;flex-wrap:wrap}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
 nav a{text-decoration:none;font-size:var(--step--1);font-weight:600;color:var(--muted)}
 nav a:hover{color:var(--fg)}
-@media (max-width:640px){nav a:not(.nav-cta){display:none}}
 .nav-cta{color:var(--ink)!important;border-bottom:2px solid var(--turmeric)}
+#menu-toggle{display:none;font:inherit;font-size:var(--step--1);font-weight:700;background:none;border:1px solid var(--line);border-radius:var(--radius);padding:7px 12px;color:var(--fg);cursor:pointer}
+@media (max-width:700px){
+  #menu-toggle{display:inline-block}
+  nav ul{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:8px max(16px,env(safe-area-inset-right,0px)) 16px max(16px,env(safe-area-inset-left,0px))}
+  nav.open ul{display:flex}
+  nav li a{display:block;padding:12px 0;font-size:var(--step-0);border-bottom:1px solid var(--line)}
+  nav li:last-child a{border-bottom:0}
+  .nav-cta{border-bottom:0!important}
+}
 
 /* Hero */
-.hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center;padding-block:72px 64px}
-@media (max-width:860px){.hero .wrap{grid-template-columns:1fr;gap:40px;padding-block:48px}}
+.hero .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center;padding-block:64px 64px}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr;gap:36px;padding-block:44px}}
 .hero-copy{display:flex;flex-direction:column;gap:22px;min-width:0}
 .hero h1{font-size:var(--step-3)}
 .hero h1 em{font-style:normal;color:var(--turmeric)}
-.hero .lede{font-size:var(--step-1);font-weight:300;max-width:34ch;color:var(--fg)}
+.hero .lede{font-size:var(--step-1);font-weight:300;max-width:34ch}
 .meaning{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:var(--step--1)}
 .meaning .thai{font-size:1.6rem;color:var(--ink)}
 .actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
-.btn{display:inline-block;text-decoration:none;font-weight:700;padding:12px 22px;border-radius:var(--radius);border:2px solid var(--ink);font-size:var(--step--1);letter-spacing:.04em}
+.btn{display:inline-block;text-decoration:none;font-weight:700;padding:12px 22px;border-radius:var(--radius);border:2px solid var(--ink);font-size:var(--step--1);letter-spacing:.04em;cursor:pointer;font-family:inherit}
 .btn.solid{background:var(--ink);color:var(--bg)}
-.btn.ghost{color:var(--ink)}
+.btn.ghost{background:transparent;color:var(--ink)}
 .btn:hover{filter:brightness(1.08)}
+.btn[disabled]{opacity:.6;cursor:progress}
 
-/* Swatches — the four categories as dyed-cloth panels */
-.swatches{display:grid;grid-template-columns:1fr 1fr;gap:10px;aspect-ratio:1/1;max-width:100%}
-.sw{border-radius:var(--radius);padding:18px;display:flex;flex-direction:column;justify-content:space-between;min-width:0;position:relative;overflow:hidden}
-.sw .thai{font-size:1.35rem;line-height:1.2}
-.sw small{font-size:.8rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
-.sw::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,transparent 0 14px,rgba(255,255,255,.06) 14px 15px);pointer-events:none}
-.sw.herb{background:var(--turmeric);color:#2A1E05}
-.sw.pet{background:var(--celadon);color:#13261A}
-.sw.muay{background:var(--lac);color:#FFF6F2}
-.sw.silver{background:var(--silver);color:#1B1F2A}
+.swatches{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:100%}
+.sw{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;max-width:100%;text-decoration:none}
+.sw img{width:100%;height:100%;object-fit:cover;transition:transform .4s ease}
+.sw:hover img{transform:scale(1.04)}
+@media (prefers-reduced-motion: reduce){.sw img{transition:none}.sw:hover img{transform:none}}
+.sw .label{position:absolute;left:8px;top:8px;background:rgba(17,21,42,.82);color:#F2F4EE;font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:3px}
 
 /* Sections */
 section{padding-block:80px}
@@ -113,17 +117,13 @@ section{padding-block:80px}
 .brands{background:var(--surface);border-block:1px solid var(--line)}
 .brand-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
 @media (max-width:760px){.brand-grid{grid-template-columns:1fr}}
-.brand{display:grid;grid-template-columns:auto 1fr;gap:18px;padding:24px;border:1px solid var(--line);border-radius:var(--radius);background:var(--bg);min-width:0}
-.brand .chip{width:54px;height:54px;border-radius:4px}
-.brand .chip.herb{background:var(--turmeric)} .brand .chip.pet{background:var(--celadon)} .brand .chip.muay{background:var(--lac)} .brand .chip.silver{background:var(--silver)}
-.brand-body{display:flex;flex-direction:column;gap:8px;min-width:0}
+.brand{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:var(--radius);background:var(--bg);overflow:hidden;min-width:0}
+.brand img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:center 40%}
+.brand-body{display:flex;flex-direction:column;gap:8px;padding:22px 24px 26px;min-width:0}
 .brand h3{font-size:var(--step-1)}
 .brand .th{font-size:.9rem;color:var(--muted)}
-.brand p{color:var(--fg)}
-.brand ul{margin:4px 0 0;padding-left:18px;color:var(--muted);font-size:var(--step--1)}
 .status{align-self:flex-start;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:99px;border:1px solid var(--line);color:var(--muted)}
 
-/* Partnership band */
 .partner{background:var(--band);color:var(--band-fg)}
 .partner h2,.partner h3{color:var(--band-fg)}
 .partner .eyebrow{color:var(--turmeric)}
@@ -141,9 +141,9 @@ section{padding-block:80px}
 @media (max-width:560px){.looking ul{grid-template-columns:1fr}}
 .looking li{padding-left:22px;position:relative}
 .looking li::before{content:"";position:absolute;left:0;top:.6em;width:10px;height:10px;background:var(--turmeric);border-radius:2px}
+.partner .btn.solid{background:var(--turmeric);border-color:var(--turmeric);color:#1B2350;margin-top:40px}
 
-/* Timeline */
-.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:2px solid var(--ink);position:relative}
+.timeline{display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid var(--ink)}
 @media (max-width:760px){.timeline{grid-template-columns:1fr;border-top:0;border-left:2px solid var(--ink)}}
 .tl{padding:22px 24px 0 0;display:flex;flex-direction:column;gap:6px;position:relative;min-width:0}
 .tl::before{content:"";position:absolute;top:-8px;left:0;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--ink)}
@@ -152,58 +152,79 @@ section{padding-block:80px}
 .tl .yr{font-family:var(--font-display);font-size:var(--step-2);color:var(--ink);font-variant-numeric:tabular-nums}
 .tl p{color:var(--muted)}
 
-/* Founder + contact */
-.founder .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.founder{border-top:1px solid var(--line)}
+.founder .wrap{display:grid;grid-template-columns:1fr 1.15fr;gap:56px;align-items:start}
 @media (max-width:860px){.founder .wrap{grid-template-columns:1fr;gap:40px}}
 .note{display:flex;flex-direction:column;gap:16px;min-width:0}
-.note blockquote{margin:0;font-size:var(--step-1);font-weight:300;line-height:1.5;color:var(--fg)}
+.note blockquote{margin:0;font-size:var(--step-1);font-weight:300;line-height:1.5}
 .note .sig{font-weight:700;color:var(--ink)}
-.contact-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:32px;display:flex;flex-direction:column;gap:16px;min-width:0}
-.contact-card h2{font-size:var(--step-2)}
+.direct{display:flex;flex-direction:column;gap:10px;margin-top:12px;padding-top:24px;border-top:1px solid var(--line)}
 .email-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-.email{font-size:var(--step-1);font-weight:700;color:var(--ink);user-select:all;word-break:break-all}
-#copy-email{font:inherit;font-size:var(--step--1);font-weight:700;padding:8px 14px;border-radius:var(--radius);border:1px solid var(--line);background:var(--bg);color:var(--fg);cursor:pointer}
-#copy-email:hover{border-color:var(--ink)}
-.contact-card .small{color:var(--muted);font-size:var(--step--1)}
+.email{font-size:var(--step-1);font-weight:700;color:var(--ink);word-break:break-all}
+.small-btn{font:inherit;font-size:var(--step--1);font-weight:700;padding:8px 14px;border-radius:var(--radius);border:1px solid var(--line);background:var(--surface);color:var(--fg);cursor:pointer}
+.small-btn:hover{border-color:var(--ink)}
+.muted{color:var(--muted);font-size:var(--step--1)}
+
+.contact-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:32px;display:flex;flex-direction:column;gap:18px;min-width:0}
+@media (max-width:520px){.contact-card{padding:22px}}
+.contact-card h2{font-size:var(--step-2)}
+form{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:560px){form{grid-template-columns:1fr}}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field.full{grid-column:1/-1}
+label{font-size:var(--step--1);font-weight:600}
+label .opt{font-weight:400;color:var(--muted)}
+input,select,textarea{font:inherit;font-size:1rem;color:var(--fg);background:var(--field);border:1px solid var(--line);border-radius:var(--radius);padding:10px 12px;width:100%}
+textarea{min-height:130px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--turmeric);outline-offset:1px;border-color:var(--turmeric)}
+input[aria-invalid="true"],textarea[aria-invalid="true"],select[aria-invalid="true"]{border-color:var(--err)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.form-foot{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
+#form-status{grid-column:1/-1;font-size:var(--step--1);font-weight:600;min-height:1.4em}
+#form-status.ok{color:var(--ok)} #form-status.err{color:var(--err)}
 
 footer{border-top:1px solid var(--line)}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:28px;color:var(--muted);font-size:var(--step--1)}
+footer a{text-decoration:none}
+footer a:hover{text-decoration:underline}
 </style>
 </head>
 <body>
-
-
+<a class="skip" href="#main">Skip to content</a>
 <header class="top">
   <div class="wrap">
     <a class="mark" href="#top" aria-label="Jaidee & Co. home"><b>Jaidee &amp; Co.</b><span class="thai">ใจดี</span></a>
-    <nav aria-label="Main">
-      <a href="#vision">Vision</a>
-      <a href="#brands">Brands</a>
-      <a href="#partners">Partners</a>
-      <a href="#roadmap">Roadmap</a>
-      <a class="nav-cta" href="#contact">Contact</a>
+    <nav id="site-nav" aria-label="Main">
+      <button id="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-list">Menu</button>
+      <ul id="nav-list">
+        <li><a href="#vision">Vision</a></li>
+        <li><a href="#brands">Brands</a></li>
+        <li><a href="#partners">Partners</a></li>
+        <li><a href="#roadmap">Roadmap</a></li>
+        <li><a class="nav-cta" href="#contact">Contact</a></li>
+      </ul>
     </nav>
   </div>
 </header>
 
-<main id="top">
-  <section class="hero" style="padding-block:0">
+<main id="main">
+  <section class="hero" id="top" style="padding-block:0">
     <div class="wrap">
       <div class="hero-copy">
         <p class="eyebrow">A house of Thai-made brands</p>
         <h1>Made in Thailand.<br><em>Loved</em> around the world.</h1>
         <p class="lede">Jaidee &amp; Co. builds global brands around the work of Thailand's best makers, and takes them to customers in the US, UK and Europe.</p>
-        <p class="meaning"><span class="thai">ใจดี</span><span>jai dee, Thai for "kind-hearted". It's how we want to work with every partner.</span></p>
+        <p class="meaning"><span class="thai" lang="th">ใจดี</span><span>jai dee, Thai for "kind-hearted". It's how we want to work with every partner.</span></p>
         <div class="actions">
-          <a class="btn solid" href="#partners">Partner with us</a>
+          <a class="btn solid" href="#contact">Partner with us</a>
           <a class="btn ghost" href="#brands">See our brands</a>
         </div>
       </div>
       <div class="swatches" aria-label="Our four brand categories">
-        <div class="sw herb"><small>Herbal wellness</small><span class="thai">สมุนไพร</span></div>
-        <div class="sw pet"><small>Pet treats</small><span class="thai">สัตว์เลี้ยง</span></div>
-        <div class="sw muay"><small>Muay Thai</small><span class="thai">มวยไทย</span></div>
-        <div class="sw silver"><small>Silver jewelry</small><span class="thai">เครื่องเงิน</span></div>
+        <a class="sw" href="#brand-herbal"><img src="img/herbal.svg" alt="Thai herbal compress, inhaler and fresh herbs" width="320" height="240"><span class="label">Herbal wellness</span></a>
+        <a class="sw" href="#brand-pet"><img src="img/pet.svg" alt="A cat beside a lickable treat and a fish-shaped snack" width="320" height="240"><span class="label">Pet treats</span></a>
+        <a class="sw" href="#brand-muay"><img src="img/muay-thai.svg" alt="A Thai-made boxing glove" width="320" height="240"><span class="label">Muay Thai</span></a>
+        <a class="sw" href="#brand-silver"><img src="img/silver.svg" alt="A silver necklace, earrings and a gemstone ring" width="320" height="240"><span class="label">Silver jewelry</span></a>
       </div>
     </div>
   </section>
@@ -216,18 +237,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
         <p>We close that gap. Our partners do what they do best, making excellent products. We build the brand, the story and the sales channels that put those products in front of customers worldwide.</p>
       </div>
       <div class="pillars">
-        <div class="pillar">
-          <h3>Made in Thailand</h3>
-          <p>Every product starts with a Thai maker: the herbal traditions, pet food expertise, Muay Thai craft and silversmithing the country is known for.</p>
-        </div>
-        <div class="pillar">
-          <h3>Built for global channels</h3>
-          <p>We sell where customers already shop: Amazon in the US and UK, our own online stores, and the new AI-driven shopping assistants.</p>
-        </div>
-        <div class="pillar">
-          <h3>Our partners' story, told well</h3>
-          <p>We put the people and craft behind each product at the centre of the brand, in modern design that customers abroad understand.</p>
-        </div>
+        <div class="pillar"><h3>Made in Thailand</h3><p>Every product starts with a Thai maker: the herbal traditions, pet food expertise, Muay Thai craft and silversmithing the country is known for.</p></div>
+        <div class="pillar"><h3>Built for global channels</h3><p>We sell where customers already shop: Amazon in the US and UK, our own online stores, and the new AI-driven shopping assistants.</p></div>
+        <div class="pillar"><h3>Our partners' story, told well</h3><p>We put the people and craft behind each product at the centre of the brand, in modern design that customers abroad understand.</p></div>
       </div>
     </div>
   </section>
@@ -240,39 +252,39 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
         <p>We're developing a brand in each category with a core manufacturing partner. Our first range is planned for 2027.</p>
       </div>
       <div class="brand-grid">
-        <article class="brand">
-          <div class="chip herb" aria-hidden="true"></div>
+        <article class="brand" id="brand-herbal">
+          <img src="img/herbal.svg" alt="" width="320" height="240" loading="lazy">
           <div class="brand-body">
             <span class="status">Selecting partner</span>
             <h3>Herbal wellness</h3>
-            <span class="th thai">สมุนไพรไทย · Thai herbs</span>
+            <span class="th thai"><span lang="th">สมุนไพรไทย</span> · Thai herbs</span>
             <p>Thai herbal traditions for a new generation: inhalers, balms, Phlai massage oils, herbal compresses and bath rituals, with modern design and clear ingredient stories.</p>
           </div>
         </article>
-        <article class="brand">
-          <div class="chip pet" aria-hidden="true"></div>
+        <article class="brand" id="brand-pet">
+          <img src="img/pet.svg" alt="" width="320" height="240" loading="lazy">
           <div class="brand-body">
             <span class="status">Selecting partner</span>
             <h3>Premium pet treats</h3>
-            <span class="th thai">สัตว์เลี้ยง · Pets</span>
+            <span class="th thai"><span lang="th">สัตว์เลี้ยง</span> · Pets</span>
             <p>Clean-label treats for cats and dogs, built on Thailand's world-class pet food manufacturing.</p>
           </div>
         </article>
-        <article class="brand">
-          <div class="chip muay" aria-hidden="true"></div>
+        <article class="brand" id="brand-muay">
+          <img src="img/muay-thai.svg" alt="" width="320" height="240" loading="lazy">
           <div class="brand-body">
             <span class="status">Selecting partner</span>
             <h3>Muay Thai &amp; fitness boxing</h3>
-            <span class="th thai">มวยไทย · Muay Thai</span>
+            <span class="th thai"><span lang="th">มวยไทย</span> · Muay Thai</span>
             <p>Authentic Thai-made gloves, shorts and training gear for a wider audience, including women and beginners discovering the sport.</p>
           </div>
         </article>
-        <article class="brand">
-          <div class="chip silver" aria-hidden="true"></div>
+        <article class="brand" id="brand-silver">
+          <img src="img/silver.svg" alt="" width="320" height="240" loading="lazy">
           <div class="brand-body">
             <span class="status">Selecting partner</span>
             <h3>Silver jewelry</h3>
-            <span class="th thai">เครื่องเงิน · Silverwork</span>
+            <span class="th thai"><span lang="th">เครื่องเงิน</span> · Silverwork</span>
             <p>Demi-fine silver and gemstone pieces that celebrate Thai craftsmanship, for customers who care how and where their jewelry is made.</p>
           </div>
         </article>
@@ -304,6 +316,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
           <li>Pride in your craft and your people</li>
         </ul>
       </div>
+      <a class="btn solid" href="#contact">Tell us about your company</a>
     </div>
   </section>
 
@@ -321,22 +334,65 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
     </div>
   </section>
 
-  <section class="founder" id="contact" style="border-top:1px solid var(--line)">
+  <section class="founder" id="contact">
     <div class="wrap">
       <div class="note">
         <p class="eyebrow">From the founder</p>
         <blockquote>"I've spent nearly a decade in global e-commerce and growth marketing, helping products reach customers across many countries. Jaidee &amp; Co. puts that experience behind Thai makers, so the best of Thailand can find its place in homes around the world."</blockquote>
         <p class="sig">Jacob, Founder</p>
+        <div class="direct">
+          <p class="eyebrow">Prefer email?</p>
+          <div class="email-row">
+            <a class="email" id="email-link" href="mailto:jacob@jaideeco.com?subject=Partnership%20enquiry%20from%20jaideeco.com">jacob@jaideeco.com</a>
+            <button class="small-btn" id="copy-email" type="button">Copy</button>
+          </div>
+          <p class="muted" id="copy-status" aria-live="polite">Write in English or Thai. We aim to reply within two working days.</p>
+        </div>
       </div>
+
       <div class="contact-card">
         <p class="eyebrow">Contact</p>
         <h2>Let's talk</h2>
-        <p>Manufacturers, makers and potential partners: we'd love to hear from you. <span class="thai">ยินดีต้อนรับผู้ผลิตไทยทุกท่าน</span></p>
-        <div class="email-row">
-          <span class="email" id="email-text">jacob@jaideeco.com</span>
-          <button id="copy-email" type="button">Copy email</button>
-        </div>
-        <p class="small" id="copy-status" aria-live="polite">Write to us in English or Thai. We aim to reply within two working days.</p>
+        <p>Manufacturers, makers and potential partners: we'd love to hear from you. <span class="thai" lang="th">ยินดีต้อนรับผู้ผลิตไทยทุกท่าน</span></p>
+        <form id="contact-form" novalidate>
+          <div class="field">
+            <label for="f-name">Your name</label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="f-company">Company</label>
+            <input id="f-company" name="company" type="text" autocomplete="organization" required>
+          </div>
+          <div class="field">
+            <label for="f-email">Email</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="f-category">Category</label>
+            <select id="f-category" name="category" required>
+              <option value="">Choose one</option>
+              <option>Herbal wellness</option>
+              <option>Pet treats</option>
+              <option>Muay Thai gear</option>
+              <option>Silver jewelry</option>
+              <option>Something else</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="f-message">Message</label>
+            <textarea id="f-message" name="message" required placeholder="Tell us about your company, your products and what you'd like to build together."></textarea>
+          </div>
+          <div class="field full">
+            <label for="f-website">Website <span class="opt">(optional)</span></label>
+            <input id="f-website" name="website" type="url" inputmode="url" placeholder="https://">
+          </div>
+          <div class="hp" aria-hidden="true"><label for="f-honey">Leave this empty</label><input id="f-honey" name="_honey" type="text" tabindex="-1" autocomplete="off"></div>
+          <p id="form-status" role="status" aria-live="polite"></p>
+          <div class="form-foot">
+            <button class="btn solid" id="f-submit" type="submit">Send message</button>
+            <span class="muted">Your message goes straight to jacob@jaideeco.com.</span>
+          </div>
+        </form>
       </div>
     </div>
   </section>
@@ -345,31 +401,64 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
 <footer>
   <div class="wrap">
     <span>© 2026 Jaidee &amp; Co. An early-stage venture preparing to launch in 2027.</span>
-    <span>jaideeco.com</span>
+    <a href="mailto:jacob@jaideeco.com">jacob@jaideeco.com</a>
   </div>
 </footer>
 
 <script>
 (function(){
-  var btn=document.getElementById('copy-email');
-  var status=document.getElementById('copy-status');
-  var text=document.getElementById('email-text');
-  btn.addEventListener('click',function(){
-    var addr=text.textContent.trim();
-    function fallback(){
-      var r=document.createRange(); r.selectNodeContents(text);
-      var s=window.getSelection(); s.removeAllRanges(); s.addRange(r);
-      status.textContent='Email selected. Press Ctrl+C or Cmd+C to copy.';
-    }
-    try{
-      navigator.clipboard.writeText(addr).then(function(){
-        btn.textContent='Copied'; status.textContent='Email address copied.';
-        setTimeout(function(){btn.textContent='Copy email';},2000);
-      },fallback);
-    }catch(e){fallback();}
+  var EMAIL='jacob@jaideeco.com';
+  var ENDPOINT='https://formsubmit.co/ajax/'+EMAIL;
+
+  /* Mobile menu */
+  var nav=document.getElementById('site-nav'), toggle=document.getElementById('menu-toggle');
+  function setMenu(open){nav.classList.toggle('open',open);toggle.setAttribute('aria-expanded',open?'true':'false');toggle.textContent=open?'Close':'Menu';}
+  toggle.addEventListener('click',function(){setMenu(!nav.classList.contains('open'));});
+  nav.querySelectorAll('ul a').forEach(function(a){a.addEventListener('click',function(){setMenu(false);});});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&nav.classList.contains('open')){setMenu(false);toggle.focus();}});
+
+  /* Copy email */
+  var copyBtn=document.getElementById('copy-email'), copyStatus=document.getElementById('copy-status'), emailLink=document.getElementById('email-link');
+  copyBtn.addEventListener('click',function(){
+    function fallback(){var r=document.createRange();r.selectNodeContents(emailLink);var s=window.getSelection();s.removeAllRanges();s.addRange(r);copyStatus.textContent='Email selected. Press Ctrl+C or Cmd+C to copy.';}
+    try{navigator.clipboard.writeText(EMAIL).then(function(){copyBtn.textContent='Copied';copyStatus.textContent='Email address copied.';setTimeout(function(){copyBtn.textContent='Copy';},2000);},fallback);}catch(e){fallback();}
+  });
+
+  /* Contact form */
+  var form=document.getElementById('contact-form'), status=document.getElementById('form-status'), submit=document.getElementById('f-submit');
+  var messages={name:'Please enter your name.',company:'Please enter your company name.',email:'Please enter a valid email address.',category:'Please choose a category.',message:'Please write a short message.',website:'Please enter a full web address starting with https://, or leave it empty.'};
+  function setStatus(text,kind){status.textContent=text;status.className=kind||'';}
+  function mailtoFallback(data){
+    var body='Name: '+data.name+'\nCompany: '+data.company+'\nEmail: '+data.email+'\nCategory: '+data.category+(data.website?'\nWebsite: '+data.website:'')+'\n\n'+data.message;
+    return 'mailto:'+EMAIL+'?subject='+encodeURIComponent('Partnership enquiry: '+data.company)+'&body='+encodeURIComponent(body);
+  }
+  form.addEventListener('input',function(e){if(e.target.getAttribute('aria-invalid')==='true'&&e.target.checkValidity()){e.target.removeAttribute('aria-invalid');}});
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var fields=['name','company','email','category','message','website'], firstBad=null;
+    fields.forEach(function(n){var el=form.elements[n];var ok=el.checkValidity()&&(n==='website'||el.value.trim()!=='');el.setAttribute('aria-invalid',ok?'false':'true');if(!ok&&!firstBad)firstBad=el;});
+    if(firstBad){setStatus(messages[firstBad.name],'err');firstBad.focus();return;}
+    if(form.elements._honey.value){setStatus('Thanks, your message has been sent.','ok');form.reset();return;}
+    var data={name:form.elements.name.value.trim(),company:form.elements.company.value.trim(),email:form.elements.email.value.trim(),category:form.elements.category.value,website:form.elements.website.value.trim(),message:form.elements.message.value.trim()};
+    var payload=Object.assign({_subject:'New partnership enquiry via jaideeco.com: '+data.company,_replyto:data.email,_template:'table',_captcha:'false'},data);
+    submit.disabled=true;submit.textContent='Sending…';setStatus('','');
+    fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(payload)})
+      .then(function(r){return r.json().catch(function(){return {};}).then(function(j){return {ok:r.ok,j:j};});})
+      .then(function(res){
+        var success=res.ok&&(res.j.success===true||res.j.success==='true');
+        if(success){setStatus('Thank you, your message has been sent. We will reply from '+EMAIL+'.','ok');form.reset();fields.forEach(function(n){form.elements[n].removeAttribute('aria-invalid');});}
+        else{throw new Error('send failed');}
+      })
+      .catch(function(){
+        status.className='err';
+        status.innerHTML='';
+        status.appendChild(document.createTextNode('Sorry, the message could not be sent. '));
+        var a=document.createElement('a');a.href=mailtoFallback(data);a.textContent='Send it by email instead';status.appendChild(a);
+        status.appendChild(document.createTextNode(' or write to '+EMAIL+'.'));
+      })
+      .then(function(){submit.disabled=false;submit.textContent='Send message';});
   });
 })();
 </script>
-
 </body>
 </html>
