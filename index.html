@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jaidee & Co.</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Jaidee & Co. is a new house of brands taking Thai craftsmanship to customers worldwide.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chonburi&family=Sarabun:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap">
+<style>
+/* Layout: indigo-dyed cloth meets turmeric — wide editorial bands, a left-aligned type-led hero, category "swatches" as the visual centre. */
+:root{
+  --bg:#F2F4EE;          /* celadon-tinted paper */
+  --surface:#FFFFFF;
+  --ink:#1B2350;         /* Sakon Nakhon indigo */
+  --fg:#1F2433;
+  --muted:#5C6377;
+  --line:#D5DACE;
+  --turmeric:#D9971E;
+  --celadon:#9DB8A4;
+  --lac:#A63D2F;         /* lacquer red, used once */
+  --silver:#B7BCC6;
+  --band:#1B2350;        /* dark band background */
+  --band-fg:#EEF0E8;
+  --font-display:"Chonburi", Georgia, "Times New Roman", serif;
+  --font-body:"Sarabun", "Segoe UI", system-ui, sans-serif;
+  --step--1:clamp(.82rem,.8rem + .1vw,.88rem);
+  --step-0:clamp(1rem,.96rem + .2vw,1.1rem);
+  --step-1:clamp(1.25rem,1.15rem + .5vw,1.5rem);
+  --step-2:clamp(1.6rem,1.4rem + 1vw,2.2rem);
+  --step-3:clamp(2.2rem,1.7rem + 2.4vw,3.8rem);
+  --radius:6px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#11152A; --surface:#181D36; --ink:#E7B44A; --fg:#E9ECE3; --muted:#A3A9BB; --line:#2C3354;
+    --turmeric:#E7B44A; --celadon:#8FAE98; --lac:#D06A58; --silver:#8E94A3; --band:#0B0E1E; --band-fg:#E9ECE3;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#11152A; --surface:#181D36; --ink:#E7B44A; --fg:#E9ECE3; --muted:#A3A9BB; --line:#2C3354;
+  --turmeric:#E7B44A; --celadon:#8FAE98; --lac:#D06A58; --silver:#8E94A3; --band:#0B0E1E; --band-fg:#E9ECE3;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:var(--step-0);line-height:1.6;margin:0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--turmeric);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--font-display);font-weight:400;line-height:1.15;text-wrap:balance;margin:0;color:var(--ink)}
+p{margin:0}
+.eyebrow{font-size:var(--step--1);text-transform:uppercase;letter-spacing:.14em;font-weight:600;color:var(--muted)}
+.thai{font-family:var(--font-body);font-weight:600;letter-spacing:0}
+
+/* Header */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.mark{display:flex;align-items:baseline;gap:10px;text-decoration:none}
+.mark b{font-family:var(--font-display);font-weight:400;font-size:1.3rem;color:var(--ink)}
+.mark span{font-size:.95rem;color:var(--turmeric)}
+nav{display:flex;gap:22px;flex-wrap:wrap}
+nav a{text-decoration:none;font-size:var(--step--1);font-weight:600;color:var(--muted)}
+nav a:hover{color:var(--fg)}
+@media (max-width:640px){nav a:not(.nav-cta){display:none}}
+.nav-cta{color:var(--ink)!important;border-bottom:2px solid var(--turmeric)}
+
+/* Hero */
+.hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center;padding-block:72px 64px}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr;gap:40px;padding-block:48px}}
+.hero-copy{display:flex;flex-direction:column;gap:22px;min-width:0}
+.hero h1{font-size:var(--step-3)}
+.hero h1 em{font-style:normal;color:var(--turmeric)}
+.hero .lede{font-size:var(--step-1);font-weight:300;max-width:34ch;color:var(--fg)}
+.meaning{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;color:var(--muted);font-size:var(--step--1)}
+.meaning .thai{font-size:1.6rem;color:var(--ink)}
+.actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.btn{display:inline-block;text-decoration:none;font-weight:700;padding:12px 22px;border-radius:var(--radius);border:2px solid var(--ink);font-size:var(--step--1);letter-spacing:.04em}
+.btn.solid{background:var(--ink);color:var(--bg)}
+.btn.ghost{color:var(--ink)}
+.btn:hover{filter:brightness(1.08)}
+
+/* Swatches — the four categories as dyed-cloth panels */
+.swatches{display:grid;grid-template-columns:1fr 1fr;gap:10px;aspect-ratio:1/1;max-width:100%}
+.sw{border-radius:var(--radius);padding:18px;display:flex;flex-direction:column;justify-content:space-between;min-width:0;position:relative;overflow:hidden}
+.sw .thai{font-size:1.35rem;line-height:1.2}
+.sw small{font-size:.8rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.sw::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(115deg,transparent 0 14px,rgba(255,255,255,.06) 14px 15px);pointer-events:none}
+.sw.herb{background:var(--turmeric);color:#2A1E05}
+.sw.pet{background:var(--celadon);color:#13261A}
+.sw.muay{background:var(--lac);color:#FFF6F2}
+.sw.silver{background:var(--silver);color:#1B1F2A}
+
+/* Sections */
+section{padding-block:80px}
+@media (max-width:640px){section{padding-block:56px}}
+.sec-head{display:flex;flex-direction:column;gap:12px;max-width:60ch;margin-bottom:40px}
+.sec-head h2{font-size:var(--step-2)}
+.sec-head p{color:var(--muted)}
+
+.belief{border-top:1px solid var(--line)}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+@media (max-width:860px){.pillars{grid-template-columns:1fr}}
+.pillar{display:flex;flex-direction:column;gap:10px;padding-top:18px;border-top:3px solid var(--turmeric);min-width:0}
+.pillar h3{font-size:var(--step-1)}
+.pillar p{color:var(--muted)}
+
+.brands{background:var(--surface);border-block:1px solid var(--line)}
+.brand-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+@media (max-width:760px){.brand-grid{grid-template-columns:1fr}}
+.brand{display:grid;grid-template-columns:auto 1fr;gap:18px;padding:24px;border:1px solid var(--line);border-radius:var(--radius);background:var(--bg);min-width:0}
+.brand .chip{width:54px;height:54px;border-radius:4px}
+.brand .chip.herb{background:var(--turmeric)} .brand .chip.pet{background:var(--celadon)} .brand .chip.muay{background:var(--lac)} .brand .chip.silver{background:var(--silver)}
+.brand-body{display:flex;flex-direction:column;gap:8px;min-width:0}
+.brand h3{font-size:var(--step-1)}
+.brand .th{font-size:.9rem;color:var(--muted)}
+.brand p{color:var(--fg)}
+.brand ul{margin:4px 0 0;padding-left:18px;color:var(--muted);font-size:var(--step--1)}
+.status{align-self:flex-start;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 10px;border-radius:99px;border:1px solid var(--line);color:var(--muted)}
+
+/* Partnership band */
+.partner{background:var(--band);color:var(--band-fg)}
+.partner h2,.partner h3{color:var(--band-fg)}
+.partner .eyebrow{color:var(--turmeric)}
+.partner .sec-head p{color:color-mix(in srgb,var(--band-fg) 72%,transparent)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;list-style:none;padding:0;margin:0;counter-reset:s}
+@media (max-width:900px){.steps{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}}
+.steps li{counter-increment:s;display:flex;flex-direction:column;gap:10px;min-width:0}
+.steps li::before{content:counter(s);font-family:var(--font-display);font-size:2rem;color:var(--turmeric);line-height:1}
+.steps h3{font-size:var(--step-1)}
+.steps p{color:color-mix(in srgb,var(--band-fg) 72%,transparent);font-size:.98rem}
+.looking{margin-top:56px;display:grid;grid-template-columns:1fr 1.4fr;gap:32px;padding-top:40px;border-top:1px solid color-mix(in srgb,var(--band-fg) 18%,transparent)}
+@media (max-width:860px){.looking{grid-template-columns:1fr}}
+.looking ul{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px 28px}
+@media (max-width:560px){.looking ul{grid-template-columns:1fr}}
+.looking li{padding-left:22px;position:relative}
+.looking li::before{content:"";position:absolute;left:0;top:.6em;width:10px;height:10px;background:var(--turmeric);border-radius:2px}
+
+/* Timeline */
+.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:2px solid var(--ink);position:relative}
+@media (max-width:760px){.timeline{grid-template-columns:1fr;border-top:0;border-left:2px solid var(--ink)}}
+.tl{padding:22px 24px 0 0;display:flex;flex-direction:column;gap:6px;position:relative;min-width:0}
+.tl::before{content:"";position:absolute;top:-8px;left:0;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--ink)}
+.tl.now::before{background:var(--turmeric);border-color:var(--turmeric)}
+@media (max-width:760px){.tl{padding:0 0 28px 24px}.tl::before{top:4px;left:-8px}}
+.tl .yr{font-family:var(--font-display);font-size:var(--step-2);color:var(--ink);font-variant-numeric:tabular-nums}
+.tl p{color:var(--muted)}
+
+/* Founder + contact */
+.founder .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+@media (max-width:860px){.founder .wrap{grid-template-columns:1fr;gap:40px}}
+.note{display:flex;flex-direction:column;gap:16px;min-width:0}
+.note blockquote{margin:0;font-size:var(--step-1);font-weight:300;line-height:1.5;color:var(--fg)}
+.note .sig{font-weight:700;color:var(--ink)}
+.contact-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:32px;display:flex;flex-direction:column;gap:16px;min-width:0}
+.contact-card h2{font-size:var(--step-2)}
+.email-row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.email{font-size:var(--step-1);font-weight:700;color:var(--ink);user-select:all;word-break:break-all}
+#copy-email{font:inherit;font-size:var(--step--1);font-weight:700;padding:8px 14px;border-radius:var(--radius);border:1px solid var(--line);background:var(--bg);color:var(--fg);cursor:pointer}
+#copy-email:hover{border-color:var(--ink)}
+.contact-card .small{color:var(--muted);font-size:var(--step--1)}
+
+footer{border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:28px;color:var(--muted);font-size:var(--step--1)}
+</style>
+</head>
+<body>
+
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Jaidee & Co. home"><b>Jaidee &amp; Co.</b><span class="thai">ใจดี</span></a>
+    <nav aria-label="Main">
+      <a href="#vision">Vision</a>
+      <a href="#brands">Brands</a>
+      <a href="#partners">Partners</a>
+      <a href="#roadmap">Roadmap</a>
+      <a class="nav-cta" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" style="padding-block:0">
+    <div class="wrap">
+      <div class="hero-copy">
+        <p class="eyebrow">A house of Thai-made brands</p>
+        <h1>Made in Thailand.<br><em>Loved</em> around the world.</h1>
+        <p class="lede">Jaidee &amp; Co. builds global brands around the work of Thailand's best makers, and takes them to customers in the US, UK and Europe.</p>
+        <p class="meaning"><span class="thai">ใจดี</span><span>jai dee, Thai for "kind-hearted". It's how we want to work with every partner.</span></p>
+        <div class="actions">
+          <a class="btn solid" href="#partners">Partner with us</a>
+          <a class="btn ghost" href="#brands">See our brands</a>
+        </div>
+      </div>
+      <div class="swatches" aria-label="Our four brand categories">
+        <div class="sw herb"><small>Herbal wellness</small><span class="thai">สมุนไพร</span></div>
+        <div class="sw pet"><small>Pet treats</small><span class="thai">สัตว์เลี้ยง</span></div>
+        <div class="sw muay"><small>Muay Thai</small><span class="thai">มวยไทย</span></div>
+        <div class="sw silver"><small>Silver jewelry</small><span class="thai">เครื่องเงิน</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="belief" id="vision">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Our vision</p>
+        <h2>Some of the world's best-made products come out of Thailand. Very few Thai makers get the global brand they deserve.</h2>
+        <p>We close that gap. Our partners do what they do best, making excellent products. We build the brand, the story and the sales channels that put those products in front of customers worldwide.</p>
+      </div>
+      <div class="pillars">
+        <div class="pillar">
+          <h3>Made in Thailand</h3>
+          <p>Every product starts with a Thai maker: the herbal traditions, pet food expertise, Muay Thai craft and silversmithing the country is known for.</p>
+        </div>
+        <div class="pillar">
+          <h3>Built for global channels</h3>
+          <p>We sell where customers already shop: Amazon in the US and UK, our own online stores, and the new AI-driven shopping assistants.</p>
+        </div>
+        <div class="pillar">
+          <h3>Our partners' story, told well</h3>
+          <p>We put the people and craft behind each product at the centre of the brand, in modern design that customers abroad understand.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="brands" id="brands">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Brands in development</p>
+        <h2>Four categories, one way of working</h2>
+        <p>We're developing a brand in each category with a core manufacturing partner. Our first range is planned for 2027.</p>
+      </div>
+      <div class="brand-grid">
+        <article class="brand">
+          <div class="chip herb" aria-hidden="true"></div>
+          <div class="brand-body">
+            <span class="status">Selecting partner</span>
+            <h3>Herbal wellness</h3>
+            <span class="th thai">สมุนไพรไทย · Thai herbs</span>
+            <p>Thai herbal traditions for a new generation: inhalers, balms, Phlai massage oils, herbal compresses and bath rituals, with modern design and clear ingredient stories.</p>
+          </div>
+        </article>
+        <article class="brand">
+          <div class="chip pet" aria-hidden="true"></div>
+          <div class="brand-body">
+            <span class="status">Selecting partner</span>
+            <h3>Premium pet treats</h3>
+            <span class="th thai">สัตว์เลี้ยง · Pets</span>
+            <p>Clean-label treats for cats and dogs, built on Thailand's world-class pet food manufacturing.</p>
+          </div>
+        </article>
+        <article class="brand">
+          <div class="chip muay" aria-hidden="true"></div>
+          <div class="brand-body">
+            <span class="status">Selecting partner</span>
+            <h3>Muay Thai &amp; fitness boxing</h3>
+            <span class="th thai">มวยไทย · Muay Thai</span>
+            <p>Authentic Thai-made gloves, shorts and training gear for a wider audience, including women and beginners discovering the sport.</p>
+          </div>
+        </article>
+        <article class="brand">
+          <div class="chip silver" aria-hidden="true"></div>
+          <div class="brand-body">
+            <span class="status">Selecting partner</span>
+            <h3>Silver jewelry</h3>
+            <span class="th thai">เครื่องเงิน · Silverwork</span>
+            <p>Demi-fine silver and gemstone pieces that celebrate Thai craftsmanship, for customers who care how and where their jewelry is made.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="partner" id="partners">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">For manufacturers</p>
+        <h2>We're looking for long-term partners, not one-off orders</h2>
+        <p>We want to work with a small number of makers in each category and grow with them. Here's how a partnership comes together.</p>
+      </div>
+      <ol class="steps">
+        <li><h3>Get to know each other</h3><p>We learn about your company, team and products through calls and factory visits in Thailand.</p></li>
+        <li><h3>Co-develop the range</h3><p>Together we choose and refine 3–5 products, agree packaging and branding, and test samples.</p></li>
+        <li><h3>Launch a trial range</h3><p>We launch on Amazon US/UK and our own store, with your craft at the heart of the brand.</p></li>
+        <li><h3>Grow together</h3><p>As products find customers, we expand the range and the markets, with you as our core maker.</p></li>
+      </ol>
+      <div class="looking">
+        <h3>What we look for in a partner</h3>
+        <ul>
+          <li>Certified production (GMP, ISO, BRC, RJC or equivalent)</li>
+          <li>Experience exporting to the US, UK or EU</li>
+          <li>R&amp;D and product development capability</li>
+          <li>Openness to working with a new, growing brand</li>
+          <li>Clear, timely communication in English or Thai</li>
+          <li>Pride in your craft and your people</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="roadmap">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Roadmap</p>
+        <h2>Where we are, and where we're going</h2>
+      </div>
+      <div class="timeline">
+        <div class="tl now"><span class="yr">2026</span><span class="eyebrow">Now</span><p>Meeting Thai manufacturers and choosing a core partner in each category.</p></div>
+        <div class="tl"><span class="yr">2027</span><span class="eyebrow">Launch</span><p>First ranges go live on Amazon US/UK and our own online stores.</p></div>
+        <div class="tl"><span class="yr">2028</span><span class="eyebrow">Bangkok</span><p>Operations based in Bangkok, close to our partners, as we expand into new markets.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="founder" id="contact" style="border-top:1px solid var(--line)">
+    <div class="wrap">
+      <div class="note">
+        <p class="eyebrow">From the founder</p>
+        <blockquote>"I've spent nearly a decade in global e-commerce and growth marketing, helping products reach customers across many countries. Jaidee &amp; Co. puts that experience behind Thai makers, so the best of Thailand can find its place in homes around the world."</blockquote>
+        <p class="sig">Jacob, Founder</p>
+      </div>
+      <div class="contact-card">
+        <p class="eyebrow">Contact</p>
+        <h2>Let's talk</h2>
+        <p>Manufacturers, makers and potential partners: we'd love to hear from you. <span class="thai">ยินดีต้อนรับผู้ผลิตไทยทุกท่าน</span></p>
+        <div class="email-row">
+          <span class="email" id="email-text">jacob@jaideeco.com</span>
+          <button id="copy-email" type="button">Copy email</button>
+        </div>
+        <p class="small" id="copy-status" aria-live="polite">Write to us in English or Thai. We aim to reply within two working days.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Jaidee &amp; Co. An early-stage venture preparing to launch in 2027.</span>
+    <span>jaideeco.com</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('copy-email');
+  var status=document.getElementById('copy-status');
+  var text=document.getElementById('email-text');
+  btn.addEventListener('click',function(){
+    var addr=text.textContent.trim();
+    function fallback(){
+      var r=document.createRange(); r.selectNodeContents(text);
+      var s=window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      status.textContent='Email selected. Press Ctrl+C or Cmd+C to copy.';
+    }
+    try{
+      navigator.clipboard.writeText(addr).then(function(){
+        btn.textContent='Copied'; status.textContent='Email address copied.';
+        setTimeout(function(){btn.textContent='Copy email';},2000);
+      },fallback);
+    }catch(e){fallback();}
+  });
+})();
+</script>
+
+</body>
+</html>
